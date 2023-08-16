@@ -148,6 +148,7 @@ macro_rules! assert_type_of {
   };
 }
 
+#[cfg(all(windows, not(feature = "noop")))]
 pub use crate::bindgen_runtime::ctor as module_init;
 
 pub mod bindgen_prelude {

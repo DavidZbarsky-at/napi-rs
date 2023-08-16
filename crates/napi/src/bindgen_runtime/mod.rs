@@ -2,6 +2,7 @@ use std::ffi::c_void;
 use std::rc::Rc;
 
 pub use callback_info::*;
+#[cfg(all(windows, not(feature = "noop")))]
 pub use ctor::ctor;
 pub use env::*;
 pub use iterator::Generator;
